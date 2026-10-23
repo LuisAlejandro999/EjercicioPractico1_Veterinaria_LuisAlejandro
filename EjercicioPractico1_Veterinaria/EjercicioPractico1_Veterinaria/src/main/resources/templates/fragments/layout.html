@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header" class="py-4 text-white">
+  <div class="container">
+    <div class="d-flex align-items-center gap-3">
+      <div class="display-5"></div>
+      <div>
+        <h1 class="h3 mb-1" th:text="#{header.titulo}">Clínica Veterinaria</h1>
+        <p class="mb-0" th:text="#{header.subtitulo}">Cuidamos a tus mascotas</p>
+      </div>
+    </div>
+  </div>
+</header>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" th:href="@{/}" th:text="#{app.nombre}">Huellitas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" th:href="@{/}" th:text="#{nav.inicio}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/tipos}" th:text="#{nav.tipos}">Tipos</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/servicios}" th:text="#{nav.servicios}">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/citas}" th:text="#{nav.citas}">Citas</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/#contacto}" th:text="#{nav.contacto}">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<footer th:fragment="footer" class="py-4 mt-5 text-center text-white">
+  <div class="container">
+    <p class="mb-1" th:text="#{footer.texto}">Cuidado para mascotas.</p>
+    
+  </div>
+</footer>
+</body>
+</html>
